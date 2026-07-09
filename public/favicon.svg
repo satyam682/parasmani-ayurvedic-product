@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient: Deep Forest Green -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1d12" />
+      <stop offset="50%" stop-color="#132D1F" />
+      <stop offset="100%" stop-color="#1b422d" />
+    </linearGradient>
+    
+    <!-- Gold Gradient: Premium Metallic Gold -->
+    <linearGradient id="goldGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9A7B2C" />
+      <stop offset="25%" stop-color="#C5A046" />
+      <stop offset="50%" stop-color="#EED582" />
+      <stop offset="75%" stop-color="#C5A046" />
+      <stop offset="100%" stop-color="#9A7B2C" />
+    </linearGradient>
+
+    <!-- Subtle Shadow for Depth -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Circular Base (Gold Border) -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="10" filter="url(#dropShadow)" />
+
+  <!-- Inner Gold Ring -->
+  <circle cx="256" cy="256" r="224" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="8,6" opacity="0.6" />
+
+  <!-- Stylized Letter 'P' with Leaf Motif -->
+  <g transform="translate(145, 110)">
+    <!-- Vertical Stem of P (designed as a growing branch/stalk) -->
+    <path d="M 40,40 L 40,250 C 40,265 50,270 65,270 C 80,270 90,265 90,250 L 90,40 Z" fill="url(#goldGrad)" />
+    
+    <!-- Loop of P -->
+    <path d="M 90,40 C 130,40 180,60 180,115 C 180,170 130,190 90,190 Z" fill="none" stroke="url(#goldGrad)" stroke-width="50" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Sprouting Leaf 1 (Top Right) -->
+    <!-- Elegantly curving out from the top-right of the P loop -->
+    <path d="M 180,115 C 210,105 240,115 255,145 C 235,165 200,165 180,115 Z" fill="url(#goldGrad)" />
+    
+    <!-- Leaf Center Vein -->
+    <path d="M 180,115 Q 220,135 255,145" fill="none" stroke="#0a1d12" stroke-width="2" opacity="0.4" />
+
+    <!-- Sprouting Leaf 2 (Smaller leaf growing from stem) -->
+    <path d="M 90,190 C 115,195 130,215 130,235 C 110,245 90,230 90,190 Z" fill="url(#goldGrad)" />
+    
+    <!-- Decorative Center Bindu/Gem (Parasmani motif - the magical stone) -->
+    <circle cx="90" cy="115" r="15" fill="url(#goldGrad)" />
+    <circle cx="90" cy="115" r="7" fill="#ffffff" opacity="0.6" />
+  </g>
+</svg>
