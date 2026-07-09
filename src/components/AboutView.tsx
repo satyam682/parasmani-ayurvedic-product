@@ -62,8 +62,8 @@ export default function AboutView({ setPage }: AboutViewProps) {
           <div className="lg:col-span-5 relative">
             <div className="rounded-3xl overflow-hidden border border-gold-500/20 shadow-xl aspect-[3/4] relative z-10">
               <img
-                src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=600"
-                alt="Aesthetic organic herbs in copper plates"
+                src="/parasmani-jadibuti-hair-oil.jpg"
+                alt="Parasmani Jadibuti Hair Oil Photoshoot"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />

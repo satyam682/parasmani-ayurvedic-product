@@ -26,11 +26,30 @@ export default function Header({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 50);
+
+      if (currentScrollY > 100) {
+        if (currentScrollY > lastScrollY) {
+          document.documentElement.classList.add("scroll-down");
+        } else {
+          document.documentElement.classList.remove("scroll-down");
+        }
+      } else {
+        document.documentElement.classList.remove("scroll-down");
+      }
+
+      lastScrollY = currentScrollY;
     };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.documentElement.classList.remove("scroll-down");
+    };
   }, []);
 
   const navLinks = [

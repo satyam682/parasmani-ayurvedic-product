@@ -49,11 +49,11 @@ export default function HomeView({
   ];
 
   const spotlightHerbs = [
-    { name: "Bhringraj", benefit: "Halts hair loss & rejuvenates hair roots from the core", image: "https://images.unsplash.com/photo-1546842931-886c185b4c8c?auto=format&fit=crop&q=80&w=400" },
-    { name: "Organic Neem", benefit: "Bactericidal power purifies acne and chronic skin rashes", image: "https://images.unsplash.com/photo-1564419320461-6870880221ad?auto=format&fit=crop&q=80&w=400" },
-    { name: "Ashwagandha", benefit: "Rejuvenating root adaptogen reduces stress and increases stamina", image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=400" },
-    { name: "Mahanarayan Oil", benefit: "Therapeutic joint lubricant that drives away cellular stiffness", image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=400" },
-    { name: "Triphala Fruits", benefit: "Gentle colon detoxification & ultimate daily digestant fire", image: "https://images.unsplash.com/photo-1512207724213-7404282d5237?auto=format&fit=crop&q=80&w=400" }
+    { name: "Bhringraj", benefit: "Halts hair loss & rejuvenates hair roots from the core", image: "/bhringraj.png" },
+    { name: "Organic Neem", benefit: "Bactericidal power purifies acne and chronic skin rashes", image: "/neem.png" },
+    { name: "Ashwagandha", benefit: "Rejuvenating root adaptogen reduces stress and increases stamina", image: "/ashwagandha.png" },
+    { name: "Mahanarayan Oil", benefit: "Therapeutic joint lubricant that drives away cellular stiffness", image: "/mahanarayan-oil.png" },
+    { name: "Triphala Fruits", benefit: "Gentle colon detoxification & ultimate daily digestant fire", image: "/triphala.png" }
   ];
 
   const galleryImages = [
@@ -231,16 +231,16 @@ export default function HomeView({
           <div className="grid grid-cols-12 gap-4 relative">
             <div className="col-span-8 rounded-3xl overflow-hidden shadow-lg border border-gold-500/10 aspect-[4/3] relative z-10">
               <img
-                src="https://images.unsplash.com/photo-1512207724213-7404282d5237?auto=format&fit=crop&q=80&w=600"
-                alt="Ayurvedic raw powders and mortars"
+                src="/parasmani-vanaspati-tel.jpg"
+                alt="Parasmani Vanaspati Tel"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
             </div>
             <div className="col-span-6 col-start-7 -mt-20 rounded-3xl overflow-hidden shadow-xl border border-gold-500/10 aspect-square relative z-20">
               <img
-                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=500"
-                alt="Herbal essential oil extracts"
+                src="/parasmani-jadibuti-hair-oil.jpg"
+                alt="Parasmani Jadibuti Hair Oil"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
