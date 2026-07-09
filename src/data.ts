@@ -1,8 +1,8 @@
 import { Product, Testimonial, BlogArticle } from "./types";
 
 export const COMPANY_INFO = {
-  name: "Parasmani Ayurvedic Products",
-  subtitle: "Shree Sahajanand Herbals",
+  name: "Pitra Kripa Traders",
+  subtitle: "Ayurvedic & Herbal Products",
   tagline: "Authentic Ayurveda · Made in India",
   promise: "Ancient wisdom crafted with disciplined modern manufacturing.",
   address: "Plot No. 84, GIDC Phase-II, Sihor - 364240",
@@ -26,346 +26,38 @@ export const STATISTICS = {
   countries: "15+",
 };
 
+/**
+ * NOTE (Aryan):
+ * These are your 16 selected products (the 15 tick-marked + Kabji Churn).
+ * The `image` fields below are TEMPORARY placeholders so the grid renders.
+ * Replace each one with your generated UGC listing image, e.g.
+ *   image: "/products/parasmani-honey.jpg"
+ * Prices/sizes are set exactly as per your printed catalog MRP.
+ */
 export const PRODUCTS: Product[] = [
-  {
-    id: "parasmani-golden-balm",
-    name: "Parasmani Golden Balm",
-    category: "Pain Relief & Balms",
-    shortDescription: "Relief balm for cold, cough & headache.",
-    fullDescription: "Ayurvedic balm that gives relief in cold, congestion, blocked nose and headache. Formulated with dynamic natural herbal active ingredients for fast action.",
-    benefits: [
-      "Relieves dry cold & deep cough congestion.",
-      "Clears blocked nasal passages instantly.",
-      "Soothes severe throbbing headaches.",
-      "Provides rapid, deep muscle relaxation."
-    ],
-    usage: "Apply a small amount to the temples, forehead or chest and massage gently.",
-    price: 25,
-    priceRange: "₹25 – ₹50",
-    variants: [
-      { name: "Small", price: 25 },
-      { name: "Large", price: 50 }
-    ],
-    image: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&q=80&w=600",
-    isBestseller: true
-  },
-  {
-    id: "parasmani-tahelka-oil",
-    name: "Parasmani Tahelka Oil",
-    category: "Pain Relief & Balms",
-    shortDescription: "Fast-acting relief oil for cold & aches.",
-    fullDescription: "Multipurpose relief oil useful for cold, congestion and headache-related discomfort. Penetrates deeply for immediate soothing.",
-    benefits: [
-      "Instant relief from blocked cold airways.",
-      "Alleviates physical headache pressure.",
-      "Soothes localized muscle tensions.",
-      "Pure herbal therapeutic formula."
-    ],
-    usage: "Apply to affected area / forehead and massage gently.",
-    price: 40,
-    image: "https://images.unsplash.com/photo-1626887568523-71887e35b0b1?auto=format&fit=crop&q=80&w=600"
-  },
-  {
-    id: "parasmani-roopvatika-face-pack",
-    name: "Parasmani Roopvatika Face Pack",
-    category: "Skincare & Beauty",
-    shortDescription: "Herbal face pack for spots, blemishes & glow.",
-    fullDescription: "Herbal face pack that helps remove pimples, blemishes, dark spots and dullness from the face, restoring natural beauty and radiance.",
-    benefits: [
-      "Fades dark spots and persistent skin blemishes.",
-      "Combats active pimples and oil clogged pores.",
-      "Restores vibrant, youthful facial skin glow.",
-      "100% natural, chemical-free exfoliation."
-    ],
-    usage: "Mix with water/rose water, apply an even layer, leave to dry, then rinse.",
-    price: 60,
-    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=600",
-    isBestseller: true
-  },
-  {
-    id: "parasmani-kesar-goti",
-    name: "Parasmani Kesar Goti",
-    category: "Skincare & Beauty",
-    shortDescription: "Saffron beauty bar for fairness & glow.",
-    fullDescription: "Kesar (saffron) beauty tablet used for facial beauty, brightness and a fairer, glowing complexion.",
-    benefits: [
-      "Enriched with pure Kashmiri Saffron extracts.",
-      "Brightens skin and matches skin tone.",
-      "Creates natural, radiant facial beauty.",
-      "Gently cleanses and softens skin."
-    ],
-    usage: "Rub gently on damp skin / use as directed, then rinse.",
-    price: 70,
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=600"
-  },
-  {
-    id: "parasmani-face-scrub",
-    name: "Parasmani Face Scrub",
-    category: "Skincare & Beauty",
-    shortDescription: "Removes blackheads, whiteheads & dead skin.",
-    fullDescription: "Face scrub that removes blackheads, whiteheads, pigmentation and dry patches, leaving skin healthy, soft and beautiful.",
-    benefits: [
-      "Gently extracts blackheads and stubborn whiteheads.",
-      "Polishes off dry patches and dead skin flakes.",
-      "Fades deep facial skin pigmentation.",
-      "Leaves skin feeling silky, smooth and refined."
-    ],
-    usage: "Apply to damp skin, massage in circular motion for 1–2 minutes, rinse.",
-    price: 110,
-    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=600"
-  },
-  {
-    id: "parasmani-multani-mitti-powder",
-    name: "Parasmani Multani Mitti Powder",
-    category: "Skincare & Beauty",
-    shortDescription: "Clay powder that clears oil & impurities.",
-    fullDescription: "Multani mitti helps remove excess oil and impurities, unclogs and refreshes pores, soothes the skin, reduces oiliness and dryness, and gives a cooling, calming effect.",
-    benefits: [
-      "Draws out deep-seated skin toxins and impurities.",
-      "Unclogs, purifies, and tightens pores.",
-      "Soothes skin rashes with active cooling action.",
-      "Naturally balances sebum oil and dry skin."
-    ],
-    usage: "Make a paste with water/rose water, apply, let dry, rinse off.",
-    price: 60,
-    image: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=600"
-  },
-  {
-    id: "parasmani-heel-crack-cream",
-    name: "Parasmani Heel Crack Cream",
-    category: "Skincare & Beauty",
-    shortDescription: "Softens & heals cracked heels.",
-    fullDescription: "Softens hard, thick and cracked heels and helps with cracking, bleeding, pain and difficulty walking.",
-    benefits: [
-      "Heals deep, painful skin fissures on heels.",
-      "Reduces bleeding and burning sensations.",
-      "Softens thick, stubborn dead skin layers.",
-      "Restores walking ease and smooth skin feet."
-    ],
-    usage: "Wash and dry feet, apply on cracked heels daily, ideally at night.",
-    price: 70,
-    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600"
-  },
-  {
-    id: "parasmani-vitani-churn",
-    name: "Parasmani Vitani Churn",
-    category: "Digestive & Wellness",
-    shortDescription: "Herbal churn for diabetes support & vitality.",
-    fullDescription: "Beneficial for complete control of diabetes (madhumeh); boosts strength and energy and helps keep the body fit and active.",
-    benefits: [
-      "Helps regulate and support blood sugar control.",
-      "Enhances natural daily strength and vigor.",
-      "Combats diabetic exhaustion and weak lethargy.",
-      "Keeps the body fit, active, and fully revitalized."
-    ],
-    usage: "Take as directed with water, usually before or after meals.",
-    price: 120,
-    image: "https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&q=80&w=600"
-  },
-  {
-    id: "parasmani-sudarshan-churn",
-    name: "Parasmani Sudarshan Churn",
-    category: "Digestive & Wellness",
-    shortDescription: "For appetite, digestion & fever.",
-    fullDescription: "Useful for loss of appetite (aruchi), weak digestion (mandagni), chronic fever (jeernjwar), malaria and overall agility.",
-    benefits: [
-      "Ignites a healthy eating appetite (aruchi).",
-      "Corrects weak, sluggish, or slow digestion.",
-      "Soothes long-term, chronic, or high fevers.",
-      "Boosts daily physical flexibility and agility."
-    ],
-    usage: "Take the prescribed quantity with water.",
-    price: 50,
-    image: "https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&q=80&w=600"
-  },
-  {
-    id: "parasmani-clean-and-clean",
-    name: "Parasmani Clean & Clean",
-    category: "Digestive & Wellness",
-    shortDescription: "Blood-purifying support for skin issues.",
-    fullDescription: "Beneficial in blood disorders, skin discomfort and full-body itching. Cleanses from within to heal the surface.",
-    benefits: [
-      "Purifies blood and clears systemic toxins.",
-      "Calms severe full-body hives and itching.",
-      "Soothes allergic skin rashes and hives.",
-      "Fosters clear, healthy skin from the inside."
-    ],
-    usage: "Take as directed with water.",
-    price: 100,
-    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600"
-  },
-  {
-    id: "parasmani-ulta-gas",
-    name: "Parasmani Ulta Gas",
-    category: "Digestive & Wellness",
-    shortDescription: "For reverse gas, sour belching & acidity.",
-    fullDescription: "Useful for reverse gas, sour belching and pitta/acidity.",
-    benefits: [
-      "Relieves reverse gas bloating and discomfort.",
-      "Neutralizes acidic sour belching instantly.",
-      "Cools elevated Pitta and heartburn.",
-      "Restores normal, healthy gut movement."
-    ],
-    usage: "Take as directed with water.",
-    price: 60,
-    image: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&q=80&w=600"
-  },
+  // ---------------- SKINCARE & BEAUTY ----------------
   {
     id: "parasmani-ayurvedic-malham",
     name: "Parasmani Ayurvedic Malham (Ointment)",
-    category: "Pain Relief & Balms",
+    category: "Skincare & Beauty",
     shortDescription: "Skin ointment for ringworm, itching & scars.",
     fullDescription: "Beneficial for ringworm, scabies, itching, boils, pimples, cracked heels, acne scars, burn marks, delivery/pregnancy marks and other skin conditions.",
     benefits: [
-      "Destroys fungal infections (ringworm, scabies).",
-      "Instantly relieves persistent, severe skin itching.",
-      "Clears acne scars, dark spots, and burn marks.",
-      "Softens deep cracked heels and dry fissures."
+      "Fights fungal infections like ringworm and scabies.",
+      "Relieves persistent, severe skin itching.",
+      "Fades acne scars, dark spots, and burn marks.",
+      "Softens deep cracked heels and dry skin."
     ],
-    usage: "Clean the area and apply a thin layer to the affected skin.",
+    usage: "Clean the area and apply a thin layer to the affected skin twice daily.",
     price: 80,
     priceRange: "₹80 – ₹140",
     variants: [
-      { name: "Small", price: 80 },
-      { name: "Medium", price: 100 },
-      { name: "Large", price: 140 }
+      { name: "20 GM", price: 80 },
+      { name: "30 GM", price: 100 },
+      { name: "50 GM", price: 140 }
     ],
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=600",
+    image: "/parasmani-ayurvedic-malham.jpg",
     isBestseller: true
-  },
-  {
-    id: "parasmani-vanaspati-tel",
-    name: "Parasmani Vanaspati Tel (Herbal Pain Oil)",
-    category: "Pain Relief & Balms",
-    shortDescription: "Herbal oil for joint, back & muscle pain.",
-    fullDescription: "Useful for joint pain, back pain, hand/leg pain, spine pain, stiffness, muscle pain and all kinds of pain.",
-    benefits: [
-      "Relieves chronic knee and arthritic joint pain.",
-      "Eases intense lower back and neck aches.",
-      "Restores stiffness and joint flexibility.",
-      "Releases deep muscular knots and strains."
-    ],
-    usage: "Massage gently over the affected area for about five minutes.",
-    price: 80,
-    priceRange: "₹80 – ₹140",
-    variants: [
-      { name: "Small", price: 80 },
-      { name: "Large", price: 140 }
-    ],
-    image: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&q=80&w=600",
-    isBestseller: true
-  },
-  {
-    id: "parasmani-foji-pain-cream",
-    name: "Parasmani Foji Pain Cream",
-    category: "Pain Relief & Balms",
-    shortDescription: "Fast pain-relief cream.",
-    fullDescription: "Pain-relief cream for joint, back and muscle aches. Fast-absorbing formula for active lifestyles.",
-    benefits: [
-      "Extremely fast pain relief penetration.",
-      "Reduces shoulder, knee, and muscular stiffness.",
-      "Non-greasy cream formula for easy use.",
-      "Relieves sports sprains and cramps."
-    ],
-    usage: "Apply and massage gently on the affected area.",
-    price: 90,
-    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600"
-  },
-  {
-    id: "parasmani-kabji-churn",
-    name: "Parasmani Kabji Churn",
-    category: "Digestive & Wellness",
-    shortDescription: "For gas, acidity & constipation.",
-    fullDescription: "Treatment for gas, acidity, sour belching and constipation.",
-    benefits: [
-      "Smoothly relieves acute or chronic constipation.",
-      "Reduces bloating, gas build-up, and heaviness.",
-      "Helps regulate healthy daily bowel motions.",
-      "Brings relief from acidic sour belching."
-    ],
-    usage: "Take as directed with warm water, usually at night.",
-    price: 50,
-    priceRange: "₹50 – ₹80",
-    variants: [
-      { name: "Small", price: 50 },
-      { name: "Large", price: 80 }
-    ],
-    image: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&q=80&w=600"
-  },
-  {
-    id: "parasmani-v-kesha-hair-oil",
-    name: "Parasmani V-Kesha Hair Oil",
-    category: "Hair Care",
-    shortDescription: "Controls hair fall, dandruff & itching.",
-    fullDescription: "Helps reduce hair fall within a few days; removes dandruff and itching; makes hair naturally black, long, thick and silky.",
-    benefits: [
-      "Stops aggressive hair fall in 7-10 days.",
-      "Clears stubborn dandruff flakes completely.",
-      "Moisturizes dry, itchy scalp from deep roots.",
-      "Encourages long, thick, thick, silky hair growth."
-    ],
-    usage: "Apply to scalp and hair, massage gently, leave on, then wash.",
-    price: 130,
-    priceRange: "₹130 – ₹350",
-    variants: [
-      { name: "Small", price: 130 },
-      { name: "Large", price: 350 }
-    ],
-    image: "https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80&w=600",
-    isBestseller: true
-  },
-  {
-    id: "parasmani-v-kesha-shampoo",
-    name: "Parasmani V-Kesha Shampoo",
-    category: "Hair Care",
-    shortDescription: "Herbal shampoo for strong, silky hair.",
-    fullDescription: "Cleanses hair, removes dandruff and supports strong, silky hair; complements V-Kesha Hair Oil.",
-    benefits: [
-      "Cleanses scalp gently without stripping oils.",
-      "Aids in stubborn dandruff control.",
-      "Revitalizes hair strands to prevent hair breakage.",
-      "Leaves hair naturally bouncy, strong, and silky."
-    ],
-    usage: "Apply to wet hair, lather, rinse; use with V-Kesha oil for best results.",
-    price: 90,
-    priceRange: "₹90 – ₹200",
-    variants: [
-      { name: "Small", price: 90 },
-      { name: "Large", price: 200 }
-    ],
-    image: "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=600"
-  },
-  {
-    id: "dennison-pain-relief-oil",
-    name: "Dennison Pain Relief Oil",
-    category: "Pain Relief & Balms",
-    shortDescription: "For joint, back & chronic pain.",
-    fullDescription: "Specially useful for joint pain, back, muscles, arthritis (gathiya), hand/leg pain and all kinds of old or chronic pain.",
-    benefits: [
-      "Highly effective for arthritis (gathiya) stiffness.",
-      "Soothes severe long-term chronic joint pain.",
-      "Combats deep backaches, spasms, and neck stiffness.",
-      "Improves localized blood circulation to joints."
-    ],
-    usage: "Massage gently over the affected area.",
-    price: 110,
-    image: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&q=80&w=600"
-  },
-  {
-    id: "dennison-malham",
-    name: "Dennison Malham (Ointment)",
-    category: "Pain Relief & Balms",
-    shortDescription: "Effective skin-disease ointment.",
-    fullDescription: "Effective remedy for skin diseases such as ringworm, scabies, itching, burn marks and delivery-time marks.",
-    benefits: [
-      "Combats severe skin ringworm and scabies.",
-      "Stops persistent dermal itching and flaking.",
-      "Lightens post-burn and pregnancy stretch marks.",
-      "Promotes clean, rash-free skin recovery."
-    ],
-    usage: "Clean the area and apply a thin layer to affected skin.",
-    price: 110,
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=600"
   },
   {
     id: "parasmani-neem-soap",
@@ -375,50 +67,274 @@ export const PRODUCTS: Product[] = [
     fullDescription: "Helps clear skin problems like ringworm, scabies and itching; keeps skin clean, soft and healthy.",
     benefits: [
       "Enriched with pure anti-bacterial Neem oil.",
-      "Prevents skin infection spread (scabies, ringworm).",
-      "Controls excess body acne and rashes.",
-      "Moisturizes skin and leaves it deeply healthy."
+      "Helps prevent skin infections like scabies and ringworm.",
+      "Controls body acne and rashes.",
+      "Cleanses while keeping skin soft and healthy."
     ],
     usage: "Use daily while bathing.",
     price: 50,
-    image: "https://images.unsplash.com/photo-1546554137-f86b9593a222?auto=format&fit=crop&q=80&w=600"
+    image: "/parasmani-neem-soap.jpg"
   },
+
+  // ---------------- PAIN RELIEF & BALMS ----------------
+  {
+    id: "parasmani-vanaspati-tel",
+    name: "Parasmani Vanaspati Tel (Herbal Pain Oil)",
+    category: "Pain Relief & Balms",
+    shortDescription: "Herbal oil for joint, back & muscle pain.",
+    fullDescription: "Useful for joint pain, back pain, hand/leg pain, spine pain, stiffness, nerve pain and all kinds of body pain.",
+    benefits: [
+      "Relieves chronic knee and arthritic joint pain.",
+      "Eases lower back, neck and spine aches.",
+      "Loosens stiffness and restores flexibility.",
+      "Releases deep muscular knots and strains."
+    ],
+    usage: "Massage gently over the affected area for about five minutes.",
+    price: 80,
+    priceRange: "₹80 – ₹170",
+    variants: [
+      { name: "30 ML", price: 80 },
+      { name: "50 ML", price: 100 },
+      { name: "100 ML", price: 170 }
+    ],
+    image: "/parasmani-vanaspati-tel.jpg",
+    isBestseller: true
+  },
+  {
+    id: "parasmani-foji-pain-cream",
+    name: "Parasmani Foji Pain Cream",
+    category: "Pain Relief & Balms",
+    shortDescription: "Fast pain-relief cream for joints & muscles.",
+    fullDescription: "Pain-relief cream specially useful for joint pain, back, nerves, arthritis (gathiya), hand/leg pain and all kinds of old, chronic pain.",
+    benefits: [
+      "Fast-absorbing relief for joint and muscle pain.",
+      "Effective for arthritis (gathiya) stiffness.",
+      "Reduces shoulder, knee and back aches.",
+      "Non-greasy formula for everyday use."
+    ],
+    usage: "Apply and massage gently on the affected area.",
+    price: 90,
+    image: "/parasmani-foji-pain-cream.jpg"
+  },
+
+  // ---------------- HAIR CARE ----------------
+  {
+    id: "parasmani-v-kesha-hair-oil",
+    name: "Parasmani V-Kesha Hair Oil",
+    category: "Hair Care",
+    shortDescription: "Controls hair fall, dandruff & itching.",
+    fullDescription: "Helps stop hair fall within a few days; removes dandruff and itching; makes hair naturally black, long, thick and silky.",
+    benefits: [
+      "Helps stop excessive hair fall within days.",
+      "Clears stubborn dandruff flakes completely.",
+      "Soothes dry, itchy scalp from deep roots.",
+      "Encourages long, thick, silky hair."
+    ],
+    usage: "Apply to scalp and hair, massage gently, leave on, then wash.",
+    price: 130,
+    priceRange: "₹130 – ₹350",
+    variants: [
+      { name: "100 ML", price: 130 },
+      { name: "300 ML", price: 350 }
+    ],
+    image: "/parasmani-v-kesha-hair-oil.jpg",
+    isBestseller: true
+  },
+  {
+    id: "parasmani-jadibuti-hair-oil",
+    name: "Parasmani Jadibuti (Herbal Hair Oil)",
+    category: "Hair Care",
+    shortDescription: "Herb-packed oil to stop hair fall in days.",
+    fullDescription: "Herbal Jadibuti hair oil that helps stop falling hair in about four days, clears dandruff and itching, and makes hair naturally black, thick, silky and healthy.",
+    benefits: [
+      "Helps stop excessive hair fall in a few days.",
+      "Removes dandruff and relieves scalp itching.",
+      "Nourishes roots for naturally black, thick hair.",
+      "Makes hair silky, healthy and strong."
+    ],
+    usage: "Apply to scalp and hair, massage into the roots, leave on, then wash.",
+    price: 130,
+    image: "/parasmani-jadibuti-hair-oil.jpg"
+  },
+
+  // ---------------- ORAL CARE ----------------
   {
     id: "parasmani-herbal-toothpaste",
     name: "Parasmani Herbal Toothpaste",
     category: "Oral Care",
     shortDescription: "Herbal paste for gums & teeth.",
-    fullDescription: "Helps with pyorrhea, gum swelling, bleeding, sensitivity and yellowing of teeth; strengthens teeth against germs and keeps teeth and gums healthy with long-lasting, effective protection.",
+    fullDescription: "Helps with pyorrhea, gum swelling, bleeding, sensitivity and yellowing of teeth; strengthens teeth against germs and keeps teeth and gums healthy with long-lasting protection.",
     benefits: [
-      "Treats pyorrhea and prevents gum swelling.",
-      "Stops gum bleeding and hot/cold sensitivity.",
+      "Helps treat pyorrhea and reduce gum swelling.",
+      "Reduces gum bleeding and hot/cold sensitivity.",
       "Cleanses yellow build-up and plaque stains.",
       "Germ protection for fresh, long-lasting breath."
     ],
     usage: "Brush twice daily.",
-    price: 70,
-    image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&q=80&w=600"
+    price: 80,
+    image: "/parasmani-herbal-toothpaste.jpg"
+  },
+
+  // ---------------- DIGESTIVE & WELLNESS ----------------
+  {
+    id: "parasmani-honey",
+    name: "Parasmani Honey",
+    category: "Digestive & Wellness",
+    shortDescription: "Pure honey for immunity, digestion & glow.",
+    fullDescription: "Pure Parasmani honey is traditionally valued for supporting overall health — helping bring a glow to the skin, aiding digestion, boosting immunity power and supporting healthy weight management.",
+    benefits: [
+      "Pure natural honey to support daily immunity.",
+      "Aids digestion and everyday gut comfort.",
+      "Adds a natural glow to the skin.",
+      "Supports healthy weight management."
+    ],
+    usage: "Take 1–2 teaspoons daily, on its own or mixed with warm water.",
+    price: 30,
+    priceRange: "₹30 – ₹290",
+    variants: [
+      { name: "25 GM", price: 30 },
+      { name: "50 GM", price: 50 },
+      { name: "100 GM", price: 75 },
+      { name: "200 GM", price: 130 },
+      { name: "500 GM", price: 290 }
+    ],
+    image: "/parasmani-honey.jpg",
+    isBestseller: true
   },
   {
-    id: "parasmani-dantram-dant-manjan",
-    name: "Parasmani Dantram Dant Manjan",
-    category: "Oral Care",
-    shortDescription: "Herbal tooth powder for strong teeth.",
-    fullDescription: "Herbal tooth powder for pyorrhea, gum swelling, bleeding, sensitivity and yellow teeth; strengthens and protects teeth and gums.",
+    id: "parasmani-kabji-churn",
+    name: "Parasmani Kabji Churn",
+    category: "Digestive & Wellness",
+    shortDescription: "For gas, acidity, sour belching & constipation.",
+    fullDescription: "Ayurvedic churn that helps relieve gas, acidity, sour belching and constipation.",
     benefits: [
-      "Strengthens tooth enamel and root health.",
-      "Stops gum bleeding and active sensitivity.",
-      "Combats pyorrhea pathogens effectively.",
-      "100% natural, chemical-free herbal tooth powder."
+      "Smoothly relieves acute or chronic constipation.",
+      "Reduces bloating, gas build-up and heaviness.",
+      "Helps regulate healthy daily bowel movements.",
+      "Brings relief from acidic sour belching."
     ],
-    usage: "Apply to teeth and gums, massage, then rinse.",
-    price: 30,
-    priceRange: "₹30 – ₹60",
+    usage: "Take as directed with warm water, usually at night.",
+    price: 60,
+    priceRange: "₹60 – ₹100",
     variants: [
-      { name: "Small", price: 30 },
-      { name: "Large", price: 60 }
+      { name: "50 GM", price: 60 },
+      { name: "100 GM", price: 100 }
     ],
-    image: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&q=80&w=600"
+    image: "/parasmani-kabji-churn.jpg"
+  },
+  {
+    id: "parasmani-pashan-churn",
+    name: "Parasmani Pashan Churn",
+    category: "Digestive & Wellness",
+    shortDescription: "Herbal support for kidney stones.",
+    fullDescription: "Pashan Churn is traditionally used to help break down kidney stones (pathri) without surgery and support flushing them out naturally through urine.",
+    benefits: [
+      "Traditionally used to help break down kidney stones.",
+      "Supports flushing of stones out through urine.",
+      "Aids overall kidney and urinary health.",
+      "A natural alternative to help avoid surgery."
+    ],
+    usage: "Take as directed with water.",
+    price: 120,
+    image: "/parasmani-pashan-churn.jpg"
+  },
+  {
+    id: "parasmani-elgik-charan",
+    name: "Parasmani Elgik Charan",
+    category: "Digestive & Wellness",
+    shortDescription: "For cold, cough & allergy relief.",
+    fullDescription: "Herbal churn useful in cold, cough (sardi–jukaam) and allergy. Simply taken with honey or water for quick, soothing relief.",
+    benefits: [
+      "Gives relief in cold, cough and congestion.",
+      "Soothes seasonal allergies.",
+      "Helps clear a blocked chest and throat.",
+      "Gentle, fast-acting herbal respiratory support."
+    ],
+    usage: "Take 1 gram with honey or water.",
+    price: 50,
+    image: "/parasmani-elgik-charan.jpg"
+  },
+  {
+    id: "parasmani-clean-and-clean",
+    name: "Parasmani Clean & Clean Churn",
+    category: "Digestive & Wellness",
+    shortDescription: "Blood-purifying support for skin issues.",
+    fullDescription: "Beneficial in blood disorders, skin discomfort and full-body itching. Cleanses from within to help heal the surface.",
+    benefits: [
+      "Helps purify blood and clear internal toxins.",
+      "Calms full-body itching and irritation.",
+      "Soothes allergic skin rashes.",
+      "Supports clear, healthy skin from the inside."
+    ],
+    usage: "Take as directed with water.",
+    price: 130,
+    image: "/parasmani-clean-and-clean.jpg"
+  },
+  {
+    id: "parasmani-ven-pradar-churn",
+    name: "Parasmani Ven Pradar Churn",
+    category: "Digestive & Wellness",
+    shortDescription: "Women's churn for period & discharge issues.",
+    fullDescription: "Formulated especially for women — helps with menstrual pain, irregular cycles, leucorrhea (white discharge / shwet pradar) and related conditions (rakt pradar).",
+    benefits: [
+      "Helps ease menstrual (period) pain and cramps.",
+      "Supports regular menstrual cycles.",
+      "Helps in leucorrhea (white discharge).",
+      "Formulated especially for women's wellness."
+    ],
+    usage: "Take as directed with water.",
+    price: 110,
+    image: "/parasmani-ven-pradar-churn.jpg"
+  },
+  {
+    id: "parasmani-ashwagandha-tablet",
+    name: "Parasmani Ashwagandha Tablet",
+    category: "Digestive & Wellness",
+    shortDescription: "Reduces stress, builds strength & stamina.",
+    fullDescription: "Ashwagandha tablets that help reduce stress and anxiety, strengthen muscles, and support balanced blood sugar — restoring natural energy and calm.",
+    benefits: [
+      "Helps reduce everyday stress and anxiety.",
+      "Strengthens muscles and physical stamina.",
+      "Supports balanced blood sugar levels.",
+      "Restores natural energy and calm."
+    ],
+    usage: "Take 1 tablet once or twice daily with water or warm milk.",
+    price: 180,
+    image: "/parasmani-ashwagandha-tablet.jpg",
+    isBestseller: true
+  },
+  {
+    id: "parasmani-shatavari-tablet",
+    name: "Parasmani Shatavari Tablet",
+    category: "Digestive & Wellness",
+    shortDescription: "Women's wellness, calm & immunity.",
+    fullDescription: "Shatavari tablets are beneficial for women's health — helping reduce stress and anxiety while boosting immunity and overall vitality.",
+    benefits: [
+      "Beneficial for overall women's health.",
+      "Helps reduce stress and anxiety.",
+      "Boosts natural immunity and vitality.",
+      "Supports hormonal balance and wellbeing."
+    ],
+    usage: "Take 1 tablet once or twice daily with water or warm milk.",
+    price: 180,
+    image: "/parasmani-shatavari-tablet.jpg"
+  },
+  {
+    id: "parasmani-b12-tablet",
+    name: "Parasmani B-12 Tablet",
+    category: "Digestive & Wellness",
+    shortDescription: "Energy, stamina, brain & blood support.",
+    fullDescription: "B-12 tablets help boost energy and stamina, sharpen the brain and memory, strengthen nerves and muscles, raise haemoglobin and blood cells, remove fatigue and weakness, and keep hair, skin and nails healthy.",
+    benefits: [
+      "Boosts energy, stamina and daily vigor.",
+      "Sharpens brain function and memory.",
+      "Strengthens nerves and muscles.",
+      "Raises haemoglobin; keeps hair, skin & nails healthy."
+    ],
+    usage: "Take 1 tablet daily with water.",
+    price: 180,
+    image: "/parasmani-b12-tablet.jpg",
+    isBestseller: true
   }
 ];
 

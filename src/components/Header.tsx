@@ -67,15 +67,19 @@ export default function Header({
             onClick={() => handleLinkClick("home")}
             className="flex items-center gap-1.5 min-[380px]:gap-2 md:gap-2.5 cursor-pointer group text-left flex-shrink"
           >
-            <div className="w-7.5 h-7.5 min-[380px]:w-8.5 min-[380px]:h-8.5 md:w-9.5 md:h-9.5 rounded-full bg-forest-700 dark:bg-gold-500 flex items-center justify-center border border-gold-500/20 group-hover:scale-110 transition-transform duration-300 shadow-md flex-shrink-0">
-              <Sparkles className="w-3.5 h-3.5 min-[380px]:w-4 min-[380px]:h-4 md:w-4.5 md:h-4.5 text-cream dark:text-forest-900" />
+            <div className="w-7.5 h-7.5 min-[380px]:w-8.5 min-[380px]:h-8.5 md:w-9.5 md:h-9.5 rounded-full overflow-hidden border border-gold-500/20 group-hover:scale-110 transition-transform duration-300 shadow-md flex-shrink-0">
+              <img
+                src="/logo.png"
+                alt="Pitra Kripa Traders Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="flex flex-col min-w-0">
               <h1 className={`font-serif leading-none tracking-wide transition-all duration-300 font-bold ${
                 isScrolled ? "text-[10px] min-[380px]:text-xs sm:text-sm md:text-base" : "text-xs min-[380px]:text-sm sm:text-base md:text-lg"
               } ${isHeaderLight ? "text-forest-900" : "text-cream"} truncate`}>
-                <span className="hidden min-[480px]:inline">{COMPANY_INFO.name}</span>
-                <span className="inline min-[480px]:hidden">Parasmani Ayurveda</span>
+                <span className="hidden min-[340px]:inline">{COMPANY_INFO.name}</span>
+                <span className="inline min-[340px]:hidden">Pitra Kripa</span>
               </h1>
               <p className={`text-[7px] min-[380px]:text-[8px] md:text-[9px] tracking-widest uppercase mt-0.5 font-sans transition-all duration-300 whitespace-nowrap ${
                 isHeaderLight ? "text-gold-600" : "text-gold-400"

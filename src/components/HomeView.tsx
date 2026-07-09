@@ -57,10 +57,10 @@ export default function HomeView({
   ];
 
   const galleryImages = [
-    { title: "Pure Dried Botanicals Sourced with Precision", url: "https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&q=80&w=500" },
-    { title: "Traditional Copper-Vessel Boiling Process", url: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&q=80&w=500" },
-    { title: "Rigorous Laboratory Testing and Analysis", url: "https://images.unsplash.com/photo-1579154204601-01588f351167?auto=format&fit=crop&q=80&w=500" },
-    { title: "Premium Dark Glass Packaging Cleanroom Assembly", url: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=500" }
+    { title: "Parasmani Ayurvedic Malham (Ointment)", url: "/parasmani-ayurvedic-malham.jpg" },
+    { title: "Parasmani Vanaspati Tel (Pain Oil)", url: "/parasmani-vanaspati-tel.jpg" },
+    { title: "Parasmani V-Kesha Hair Oil", url: "/parasmani-v-kesha-hair-oil.jpg" },
+    { title: "Parasmani Neem Soap", url: "/parasmani-neem-soap.jpg" }
   ];
 
   // State for Animated Statistics
@@ -165,25 +165,28 @@ export default function HomeView({
 
           {/* Right Image/Vector Column */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
-            <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-[32px] overflow-hidden border border-gold-500/20 shadow-2xl group">
-              <img
-                src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=800"
-                alt="Aesthetic Ayurvedic Herbal Extracts & Essential Oils"
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-forest-900/60 via-transparent to-transparent opacity-80" />
+            <div className="flex flex-col w-full max-w-[420px] rounded-[32px] overflow-hidden border border-gold-500/20 shadow-2xl bg-cream/70 dark:bg-forest-900/40 backdrop-blur-md transition-all duration-300 hover:border-gold-500/35 group">
+              {/* Top Product Image */}
+              <div className="w-full aspect-[4/4] overflow-hidden bg-white flex items-center justify-center border-b border-gold-500/10 relative">
+                <img
+                  src={PRODUCTS[0].image}
+                  alt={PRODUCTS[0].name}
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
               
-              <div className="absolute bottom-6 left-6 right-6 p-5 luxury-glass rounded-2xl border border-gold-300/20">
-                <p className="text-forest-900 text-xs uppercase tracking-widest font-bold">Bestseller formulation</p>
-                <h3 className="font-serif text-xl font-bold text-forest-900 mt-1">Parasmani Skin Ointment</h3>
-                <p className="text-ink-600 text-xs mt-1 leading-relaxed">Trusted for eczema, ringworm, and severe itching relief.</p>
+              {/* Bottom Card Content */}
+              <div className="p-6 text-left bg-cream/30 dark:bg-forest-950/20">
+                <p className="text-gold-500 dark:text-gold-300 text-[10px] uppercase tracking-widest font-bold font-sans">Bestseller formulation</p>
+                <h3 className="font-serif text-lg md:text-xl font-bold text-forest-900 dark:text-cream mt-1">{PRODUCTS[0].name}</h3>
+                <p className="text-ink-600 dark:text-cream/70 text-xs mt-1.5 leading-relaxed font-light">{PRODUCTS[0].shortDescription}</p>
                 <button
                   id="hero-bestseller-detail"
                   onClick={() => onOpenProductModal(PRODUCTS[0])}
-                  className="text-forest-700 hover:text-leaf-500 font-sans text-xs tracking-wider uppercase font-semibold flex items-center gap-1 mt-3 group cursor-pointer"
+                  className="text-forest-700 dark:text-gold-500 hover:text-leaf-500 dark:hover:text-gold-300 font-sans text-xs tracking-wider uppercase font-semibold flex items-center gap-1 mt-3.5 group/btn cursor-pointer transition-colors duration-200"
                 >
-                  View Details <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  View Details <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
               </div>
             </div>
@@ -518,7 +521,7 @@ export default function HomeView({
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Left World Map SVG */}
-          <div className="relative p-6 luxury-glass rounded-3xl border border-gold-500/15 overflow-hidden flex items-center justify-center min-h-[300px]">
+          <div className="relative p-6 bg-cream/5 border border-cream/10 rounded-3xl overflow-hidden flex items-center justify-center min-h-[300px]">
             {/* World Map Background SVG */}
             <svg
               className="w-full h-auto text-cream/10 max-h-[280px]"

@@ -70,7 +70,14 @@ export default function FloatingUtilities({
         <span className="absolute right-full mr-3 bg-forest-900/95 text-cream text-xs px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap font-sans uppercase tracking-widest border border-gold-500/20">
           Enquire on WhatsApp
         </span>
-        <Send className="w-6 h-6 animate-pulse group-hover:rotate-12 transition-transform duration-300" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="w-6 h-6 animate-pulse group-hover:rotate-12 transition-transform duration-300"
+        >
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.863-9.864.001-2.637-1.03-5.114-2.905-6.99C16.546 1.875 14.07 .843 11.43.843 5.994.843 1.571 5.263 1.568 10.702c0 1.696.444 3.351 1.286 4.808l-.968 3.535 3.623-.951zm12.338-7.393c-.328-.164-1.94-.959-2.241-1.07-.301-.11-.52-.164-.738.164-.219.329-.848 1.07-1.039 1.29-.192.219-.384.246-.712.081-1.09-.545-1.974-.953-2.756-2.296-.201-.345-.201-.564-.03-.736.152-.152.328-.383.492-.575.164-.192.219-.328.328-.548.11-.219.055-.411-.027-.575-.082-.164-.738-1.782-1.012-2.443-.267-.643-.538-.556-.738-.567-.19-.009-.411-.011-.63-.011-.219 0-.575.082-.876.411-.3.329-1.149 1.123-1.149 2.738 0 1.615 1.176 3.178 1.341 3.397.164.22 2.313 3.532 5.6 4.95 2.735 1.18 3.322 1.002 3.978.943.657-.059 1.94-.794 2.215-1.56.274-.767.274-1.423.192-1.56-.082-.138-.3-.22-.63-.383z" />
+        </svg>
         <span className="absolute top-0 right-0 flex h-3.5 w-3.5">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500"></span>

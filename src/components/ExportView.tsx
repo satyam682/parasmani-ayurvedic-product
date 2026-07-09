@@ -174,9 +174,9 @@ export default function ExportView() {
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
             >
-              {/* High-quality transparent world map outline base from Wikimedia Commons */}
+              {/* High-quality transparent world map outline base served locally */}
               <image
-                href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/World_map_blank_without_borders.svg/1000px-World_map_blank_without_borders.svg.png"
+                href="/world-map.svg"
                 x="0"
                 y="0"
                 width="1000"

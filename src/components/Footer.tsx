@@ -43,8 +43,12 @@ export default function Footer({ setPage }: FooterProps) {
         {/* Column 1 - Brand Info */}
         <div className="flex flex-col gap-5">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-gold-500 flex items-center justify-center border border-gold-300/30">
-              <Sparkles className="w-4 h-4 text-forest-900" />
+            <div className="w-9 h-9 rounded-full overflow-hidden border border-gold-300/30 flex-shrink-0">
+              <img
+                src="/logo.png"
+                alt="Pitra Kripa Traders Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h3 className="font-serif text-lg font-bold tracking-wider text-cream">

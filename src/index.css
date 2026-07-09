@@ -97,3 +97,14 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #DCC79A;
 }
+
+/* Placeholder contrast styling */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(26, 26, 26, 0.5) !important; /* text-ink-900 with 50% opacity for high readability */
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: rgba(250, 247, 240, 0.45) !important; /* text-cream with 45% opacity for dark mode */
+}
