@@ -1,0 +1,6 @@
+{
+  "name": "Parasmani Ayurvedic Products",
+  "description": "Premium Luxury Ayurvedic eCommerce and Export showcase for Parasmani Ayurvedic Products (Shree Sahajanand Herbals) from Gujarat, India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

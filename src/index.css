@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-forest-900: #0E2A14;
+  --color-forest-700: #1B5E20;
+  --color-leaf-500: #2E7D32;
+  --color-leaf-300: #6BA368;
+  --color-gold-500: #BFA05A;
+  --color-gold-300: #DCC79A;
+  --color-cream: #FAF7F0;
+  --color-beige: #EDE4D3;
+  --color-earth: #F5F1E8;
+  --color-ink-900: #1A1A1A;
+  --color-ink-600: #4A4A4A;
+  --color-line: #E3DAC9;
+
+  --animate-gold-shimmer: gold-shimmer 3s ease-in-out infinite;
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-float-leaf-1: float-leaf-1 16s ease-in-out infinite;
+  --animate-float-leaf-2: float-leaf-2 20s ease-in-out infinite;
+}
+
+@keyframes gold-shimmer {
+  0%, 100% { opacity: 0.5; transform: scaleX(0.95); }
+  50% { opacity: 1; transform: scaleX(1.05); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes float-leaf-1 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(8deg); }
+}
+
+@keyframes float-leaf-2 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(-12deg); }
+}
+
+/* Premium micro-textures and paper effects */
+.paper-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+}
+
+/* Glassmorphism utility */
+.luxury-glass {
+  background: rgba(250, 247, 240, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(191, 160, 90, 0.2);
+}
+
+.luxury-glass-dark {
+  background: rgba(14, 42, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(191, 160, 90, 0.15);
+}
+
+/* Hide scrollbars but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Base resets & styling transitions */
+body {
+  transition: background-color 0.5s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F0;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0E2A14;
+}
+::-webkit-scrollbar-thumb {
+  background: #BFA05A;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #DCC79A;
+}
