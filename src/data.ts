@@ -7,8 +7,8 @@ export const COMPANY_INFO = {
   promise: "Ancient wisdom crafted with disciplined modern manufacturing.",
   address: "Plot No. 84, GIDC Phase-II, Sihor - 364240",
   cityStateCountry: "Sihor, Bhavnagar, Gujarat, India",
-  phone: "+91 94269 19430",
-  whatsapp: "+919426919430",
+  phone: "+91 79998 64334",
+  whatsapp: "+917999864334",
   email: "info@shreesahjanandherbal.com",
   hours: "9:00 AM - 7:00 PM, Monday - Saturday",
   socials: {
