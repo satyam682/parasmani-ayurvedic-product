@@ -30,11 +30,11 @@ export default function CartSlideout({
     cart.forEach((item, index) => {
       const price = item.selectedPrice || item.product.price;
       const sizeStr = item.selectedSize ? ` - Variant: ${item.selectedSize}` : "";
-      message += `${index + 1}. Product: ${item.product.name}${sizeStr}\n   Qty: ${item.quantity}\n   Price: ₹${price} each\n   Total: ₹${price * item.quantity}\n\n`;
+      message += `${index + 1}. Product: ${item.product.name}${sizeStr}\n   Qty: ${item.quantity}\n   Price: ₹${maskPrice(price)} each\n   Total: ₹${maskPrice(price * item.quantity)}\n\n`;
     });
 
     message += `--------------------------------\n`;
-    message += `Subtotal: ₹${subtotal}\n`;
+    message += `Subtotal: ₹${maskPrice(subtotal)}\n`;
     message += `--------------------------------\n\n`;
     message += `Please confirm the total shipping charges and shared payment/bank details to proceed.\nThank you!`;
 

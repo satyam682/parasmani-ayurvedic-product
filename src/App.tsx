@@ -14,7 +14,7 @@ import ContactView from "./components/ContactView";
 
 // Data types & assets
 import { Product, CartItem } from "./types";
-import { PRODUCTS, COMPANY_INFO } from "./data";
+import { PRODUCTS, COMPANY_INFO, maskPrice } from "./data";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<string>("home");
@@ -135,8 +135,8 @@ export default function App() {
     message += `I would like to place an order for:\n`;
     message += `Product Name: ${product.name}${size ? ` (${size})` : ""}\n`;
     message += `Quantity: ${quantity}\n`;
-    message += `Price: ₹${price} each\n`;
-    message += `Subtotal: ₹${price * quantity}\n\n`;
+    message += `Price: ₹${maskPrice(price)} each\n`;
+    message += `Subtotal: ₹${maskPrice(price * quantity)}\n\n`;
     message += `Please advise on direct dispatch shipping charges to my address. Thank you!`;
 
     const encodedText = encodeURIComponent(message);
