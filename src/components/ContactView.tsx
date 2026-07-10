@@ -173,7 +173,6 @@ export default function ContactView() {
                   <input
                     id="contact-name-input"
                     type="text"
-                    placeholder="e.g. Anjali Sharma"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
@@ -187,7 +186,6 @@ export default function ContactView() {
                   <input
                     id="contact-email-input"
                     type="email"
-                    placeholder="e.g. anjali@gmail.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -203,7 +201,6 @@ export default function ContactView() {
                   <input
                     id="contact-phone-input"
                     type="tel"
-                    placeholder="e.g. +91 98252 XXXXX"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     required
@@ -235,7 +232,6 @@ export default function ContactView() {
                 <textarea
                   id="contact-message-textarea"
                   rows={4}
-                  placeholder="Tell us about your health query or business interest. Include preferred callback hours if relevant."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required

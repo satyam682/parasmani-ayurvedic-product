@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import {
   Search, Heart, CheckCircle, Plus, Minus, ShoppingBag, MessageSquare, ShieldCheck, Award, Sparkles
 } from "lucide-react";
-import { PRODUCTS, FAQS } from "../data";
+import { PRODUCTS, FAQS, maskPrice } from "../data";
 import { Product } from "../types";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -294,7 +294,7 @@ export default function ProductsView({
                           {product.category}
                         </span>
                         <span className="font-serif text-sm font-bold text-[#BFA05A]">
-                          {product.priceRange ? product.priceRange : `₹${product.price}`}
+                          {product.priceRange ? maskPrice(product.priceRange) : `₹${maskPrice(product.price)}`}
                         </span>
                       </div>
 
@@ -398,7 +398,7 @@ export default function ProductsView({
                         
                         <div className="flex items-center gap-2 mt-2 border-b border-[#BFA05A]/10 pb-3">
                           <span className="font-serif text-xl font-bold text-[#BFA05A]">
-                            ₹{selectedVariant ? selectedVariant.price : activeProductInModal.price}
+                            ₹{maskPrice(selectedVariant ? selectedVariant.price : activeProductInModal.price)}
                           </span>
                           <span className="text-[10px] text-stone-500 dark:text-[#FAF7F0]/50 font-sans font-light">MRP (Inclusive of all taxes)</span>
                         </div>
@@ -426,7 +426,7 @@ export default function ProductsView({
                                     : "bg-stone-100 dark:bg-[#07190B]/40 text-stone-600 dark:text-[#FAF7F0]/70 border border-[#BFA05A]/15 hover:border-[#BFA05A]/35"
                                 }`}
                               >
-                                {v.name} – ₹{v.price}
+                                {v.name} – ₹{maskPrice(v.price)}
                               </button>
                             ))}
                           </div>

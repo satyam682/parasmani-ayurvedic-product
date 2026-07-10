@@ -3,7 +3,7 @@ import {
   ArrowRight, ShieldCheck, Globe, Star, Sparkles, AlertCircle, ChevronDown, CheckCircle,
   Plus, Minus, ArrowLeftRight, Heart, Award, Beaker, Truck, Check, HelpCircle
 } from "lucide-react";
-import { COMPANY_INFO, STATISTICS, PRODUCTS, TESTIMONIALS, FAQS } from "../data";
+import { COMPANY_INFO, STATISTICS, PRODUCTS, TESTIMONIALS, FAQS, maskPrice } from "../data";
 import { Product } from "../types";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -349,7 +349,7 @@ export default function HomeView({
                         {product.category}
                       </span>
                       <span className="font-serif text-lg font-bold text-gold-500">
-                        ₹{product.price} <span className="text-[10px] text-ink-600 dark:text-cream/60 font-sans font-light">MRP</span>
+                        ₹{maskPrice(product.price)} <span className="text-[10px] text-ink-600 dark:text-cream/60 font-sans font-light">MRP</span>
                       </span>
                     </div>
 

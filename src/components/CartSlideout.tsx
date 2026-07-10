@@ -1,6 +1,6 @@
 import { X, Plus, Minus, Trash2, ShoppingBag, MessageSquare } from "lucide-react";
 import { CartItem } from "../types";
-import { COMPANY_INFO } from "../data";
+import { COMPANY_INFO, maskPrice } from "../data";
 import { motion, AnimatePresence } from "motion/react";
 
 interface CartSlideoutProps {
@@ -149,7 +149,7 @@ export default function CartSlideout({
                         </div>
 
                         <p className="font-serif text-xs text-[#BFA05A] font-bold mt-0.5">
-                          ₹{itemPrice} <span className="text-[9px] font-sans text-stone-600 dark:text-[#FAF7F0]/40 font-light">each</span>
+                          ₹{maskPrice(itemPrice)} <span className="text-[9px] font-sans text-stone-600 dark:text-[#FAF7F0]/40 font-light">each</span>
                         </p>
 
                         {/* Quantity controls */}
@@ -196,7 +196,7 @@ export default function CartSlideout({
               <div className="p-6 border-t border-[#BFA05A]/15 bg-[#FAF7F0] dark:bg-[#07190B] flex flex-col gap-4">
                 <div className="flex items-center justify-between text-sm">
                   <span className="font-sans text-stone-600 dark:text-[#FAF7F0]/70">Subtotal Price</span>
-                  <span className="font-serif text-lg font-bold text-[#BFA05A]">₹{subtotal}</span>
+                  <span className="font-serif text-lg font-bold text-[#BFA05A]">₹{maskPrice(subtotal)}</span>
                 </div>
                 <p className="font-sans text-[10px] text-stone-500 dark:text-[#FAF7F0]/50 text-left leading-relaxed">
                   *Delivery and custom shipping charges are calculated during order finalization over WhatsApp. No advance payment required.

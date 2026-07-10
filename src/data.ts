@@ -1,5 +1,13 @@
 import { Product, Testimonial, BlogArticle } from "./types";
 
+export function maskPrice(price: number | string): string {
+  const str = price.toString();
+  return str.replace(/\d+/g, (match) => {
+    if (match.length <= 1) return match;
+    return match[0] + "x".repeat(match.length - 1);
+  });
+}
+
 export const COMPANY_INFO = {
   name: "Pitra Kripa Traders",
   subtitle: "Ayurvedic & Herbal Products",
