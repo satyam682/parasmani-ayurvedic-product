@@ -46,7 +46,7 @@ export default function Footer({ setPage }: FooterProps) {
             <div className="w-9 h-9 rounded-full overflow-hidden border border-gold-300/30 flex-shrink-0">
               <img
                 src="/logo.png"
-                alt="Pitra Kripa Traders Logo"
+                alt="Pitra Krapa Traders Logo"
                 className="w-full h-full object-cover"
               />
             </div>

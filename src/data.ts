@@ -9,7 +9,7 @@ export function maskPrice(price: number | string): string {
 }
 
 export const COMPANY_INFO = {
-  name: "Pitra Kripa Traders",
+  name: "Pitra Krapa Traders",
   subtitle: "Ayurvedic & Herbal Products",
   tagline: "Authentic Ayurveda · Made in India",
   promise: "Ancient wisdom crafted with disciplined modern manufacturing.",

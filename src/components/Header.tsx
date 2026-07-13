@@ -89,7 +89,7 @@ export default function Header({
             <div className="w-7.5 h-7.5 min-[380px]:w-8.5 min-[380px]:h-8.5 md:w-9.5 md:h-9.5 rounded-full overflow-hidden border border-gold-500/20 group-hover:scale-110 transition-transform duration-300 shadow-md flex-shrink-0">
               <img
                 src="/logo.png"
-                alt="Pitra Kripa Traders Logo"
+                alt="Pitra Krapa Traders Logo"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -98,7 +98,7 @@ export default function Header({
                 isScrolled ? "text-[10px] min-[380px]:text-xs sm:text-sm md:text-base" : "text-xs min-[380px]:text-sm sm:text-base md:text-lg"
               } ${isHeaderLight ? "text-forest-900" : "text-cream"} truncate`}>
                 <span className="hidden min-[340px]:inline">{COMPANY_INFO.name}</span>
-                <span className="inline min-[340px]:hidden">Pitra Kripa</span>
+                <span className="inline min-[340px]:hidden">Pitra Krapa</span>
               </h1>
               <p className={`text-[7px] min-[380px]:text-[8px] md:text-[9px] tracking-widest uppercase mt-0.5 font-sans transition-all duration-300 whitespace-nowrap ${
                 isHeaderLight ? "text-gold-600" : "text-gold-400"

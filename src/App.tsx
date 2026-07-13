@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CartSlideout from "./components/CartSlideout";
@@ -17,7 +18,20 @@ import { Product, CartItem } from "./types";
 import { PRODUCTS, COMPANY_INFO, maskPrice } from "./data";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<string>("home");
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const getPageFromPath = (path: string) => {
+    const cleaned = path.replace(/^\//, "");
+    if (!cleaned) return "home";
+    const validPages = ["home", "about", "products", "export", "contact"];
+    if (validPages.includes(cleaned)) {
+      return cleaned;
+    }
+    return "home";
+  };
+  const currentPage = getPageFromPath(location.pathname);
+
   const [cart, setCart] = useState<CartItem[]>([]);
   const [wishlist, setWishlist] = useState<string[]>([]);
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
@@ -80,7 +94,11 @@ export default function App() {
 
   // Switch navigation page
   const handleSetPage = (page: string) => {
-    setCurrentPage(page);
+    if (page === "home") {
+      navigate("/");
+    } else {
+      navigate(`/${page}`);
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -216,7 +234,7 @@ export default function App() {
         cartCount={cart.reduce((sum, item) => sum + item.quantity, 0)}
         toggleCart={() => setIsCartOpen(!isCartOpen)}
         onOpenSearch={() => {
-          setCurrentPage("products");
+          handleSetPage("products");
           setTimeout(() => {
             const input = document.getElementById("search-products-field");
             if (input) input.focus();
@@ -241,7 +259,7 @@ export default function App() {
         cartCount={cart.reduce((sum, item) => sum + item.quantity, 0)}
         toggleCart={() => setIsCartOpen(!isCartOpen)}
         onOpenSearch={() => {
-          setCurrentPage("products");
+          handleSetPage("products");
           setTimeout(() => {
             const input = document.getElementById("search-products-field");
             if (input) input.focus();
